@@ -4,30 +4,476 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <title>Nikhil Ramachandran - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Nikhil Ramachandran - Data Science Portfolio</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif; 
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        nav {
+            background-color: #2980b9;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #ecf0f1;
+            transform: translateY(-2px);
+        }
+        header {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: #fff;
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 20px 0 10px;
+            font-size: 3.2em;
+            font-weight: 700;
+        }
+        header p {
+            margin: 10px 0;
+            font-size: 1.4em;
+            opacity: 0.9;
+        }
+        .profile-image {
+            width: 180px; 
+            height: 180px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+            object-fit: cover; 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border: 5px solid rgba(255, 255, 255, 0.3);
+        }
+        section {
+            padding: 70px 0;
+        }
+        section:nth-child(even) {
+            background-color: #f5f7fa;
+        }
+        h2 {
+            color: #2980b9;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 4px;
+            background-color: #3498db;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .about-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .about-text {
+            flex: 2;
+        }
+        .about-stats {
+            flex: 1;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .stat-item {
+            margin-bottom: 15px;
+        }
+        .stat-title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        .stat-bar {
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .stat-progress {
+            height: 100%;
+            background-color: #3498db;
+        }
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .skill-list li {
+            background-color: #3498db;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .skill-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .project-card {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        .project-card h3 {
+            color: #2980b9;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto;
+            padding-top: 15px;
+        }
+        .project-tag {
+            background-color: #e1f0fa;
+            color: #2980b9;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 40px auto 0;
+            padding: 20px;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #3498db;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        .event {
+            position: relative;
+            width: 45%;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        .event::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border: 4px solid #3498db;
+            border-radius: 50%;
+            top: 20px;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 55%;
+        }
+        .left::after {
+            right: -10px;
+        }
+        .right::after {
+            left: -10px;
+        }
+        .event h3 {
+            color: #2980b9;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        .event .date {
+            color: #7f8c8d;
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: block;
+        }
+        #contact {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: #fff;
+            padding: 70px 0;
+            text-align: center;
+        }
+        #contact h2::after {
+            background-color: #fff;
+        }
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .contact-method {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        .contact-info {
+            font-size: 1.1em;
+        }
+        #contact a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        #contact a:hover {
+            color: #ecf0f1;
+        }
+        #cta {
+            text-align: center;
+            padding: 80px 0;
+            background-color: #f5f7fa;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #27ae60;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 20px 10px 0;
+            box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
+        }
+        .btn:hover {
+            background-color: #219d53;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(39, 174, 96, 0.4);
+        }
+        .btn-secondary {
+            background-color: #3498db;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+        }
+        .btn-secondary:hover {
+            background-color: #2980b9;
+            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
+        }
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 25px 0;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: #fff;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+        }
+        .social-link:hover {
+            background-color: #3498db;
+            transform: translateY(-3px);
+        }
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            .timeline::after {
+                left: 31px;
+            }
+            .event {
+                width: 85%;
+                left: 0;
+            }
+            .event::after {
+                left: -10px;
+            }
+            .left::after, .right::after {
+                left: 22px;
+            }
+            .right {
+                left: 0;
+            }
+        }
+        @media (max-width: 768px) {
+            nav .container {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .nav-links {
+                margin-top: 15px;
+            }
+            header {
+                padding: 60px 0 40px;
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-methods {
+                gap: 30px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Nikhil R</a>
+            <div class="nav-links">
+                <a href="#about" class="active">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
     <header>
         <div class="container">
-            <img src="nikhil.jpg" alt="Nikhil R" class="profile-image">
-            <h1 class="animate__animated animate__fadeIn">Nikhil R</h1>
-            <p class="animate__animated animate__fadeIn">Data Science Grad</p>
+            <img src="nikhil.jpg" alt="Nikhil R" class="profile-image animate__animated animate__fadeIn">
+            <h1 class="animate__animated animate__fadeIn">Nikhil Ramachandran</h1>
+            <p class="animate__animated animate__fadeIn">Data Science Professional | ML Enthusiast | Problem Solver</p>
         </div>
     </header>
 
     <section id="about">
         <div class="container">
             <h2 class="animate__animated animate__fadeIn">About Me</h2>
-            <p class="animate__animated animate__fadeIn">Hello, I'm Nikhil Ramachandran, a passionate and enthusiastic Data Science student currently pursuing my Integrated M.Sc in Coimbatore Institute Technology.</p>
-
-            <p class="animate__animated animate__fadeIn">During my academic journey, I have acquired strong problem-solving skills and a solid understanding of programming languages. My internship experience at CleverInsight during my 7th semester which allowed me to apply my theoretical knowledge to real-world projects.</p>
-
-            <p class="animate__animated animate__fadeIn">My journey in the field of technology has fueled my curiosity to explore and adapt to emerging technologies. I am enthusiastic about learning new concepts, collaborating with like-minded individuals, and contributing to innovative projects that make a positive impact.</p>
+            <div class="about-content animate__animated animate__fadeIn">
+                <div class="about-text">
+                    <p>Hello, I'm Nikhil Ramachandran, a passionate Data Science professional currently pursuing my Integrated M.Sc in Data Science at Coimbatore Institute of Technology with a CGPA of 8.69.</p>
+                    
+                    <p>With experience in both software development and data analytics, I've worked on projects ranging from automated form filling solutions to election forecasting and medical diagnosis models. My journey in technology has fueled my curiosity to explore emerging technologies, particularly in the fields of machine learning and generative AI.</p>
+                    
+                    <p>I'm enthusiastic about leveraging data to drive insights and build intelligent solutions that make a positive impact. My experience across multiple internships has allowed me to apply theoretical knowledge to real-world problems and develop strong problem-solving skills.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-title">
+                            <span>Data Science</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="stat-bar">
+                            <div class="stat-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-title">
+                            <span>Machine Learning</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="stat-bar">
+                            <div class="stat-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-title">
+                            <span>Python</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="stat-bar">
+                            <div class="stat-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-title">
+                            <span>Natural Language Processing</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="stat-bar">
+                            <div class="stat-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -36,15 +482,23 @@
             <h2 class="animate__animated animate__fadeIn">Skills</h2>
             <ul class="skill-list animate__animated animate__fadeIn">
                 <li>Python</li>
-                <li>SQL, Mongodb</li>
-                <li>NLP</li>
+                <li>SQL</li>
+                <li>MongoDB</li>
+                <li>Machine Learning</li>
+                <li>Natural Language Processing</li>
                 <li>Generative AI</li>
                 <li>Django</li>
+                <li>Flask</li>
                 <li>Streamlit</li>
                 <li>PowerBI</li>
                 <li>LangChain</li>
-                <li>Problem Solving</li>
+                <li>Docker</li>
+                <li>TensorFlow</li>
+                <li>Pandas</li>
+                <li>Scikit-Learn</li>
                 <li>Data Visualization</li>
+                <li>Problem Solving</li>
+                <li>RAG</li>
             </ul>
         </div>
     </section>
@@ -52,19 +506,59 @@
     <section id="projects">
         <div class="container">
             <h2 class="animate__animated animate__fadeIn">Projects</h2>
-            <div class="project-card animate__animated animate__fadeIn">
-                <h3>OneLP</h3>
-                <p>Developed a Django-based generative AI app integrating Together API, LangChain, and a LLM model for NLP tasks, featuring text summarization, sentiment analysis, language translation, document chat, and voice-to-text conversion.</p>
-            </div>
+            <div class="projects-grid">
+                <div class="project-card animate__animated animate__fadeIn">
+                    <h3>DataViz</h3>
+                    <p>A Flask application that serves as an intelligent agent for data visualization, enabling insights on any dataset with intelligent analysis and recommendations. The system reduces manual efforts by 30% through automated visualization recommendations.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Flask</span>
+                        <span class="project-tag">MongoDB</span>
+                        <span class="project-tag">Google's ADK</span>
+                        <span class="project-tag">Data Viz</span>
+                    </div>
+                </div>
 
-            <div class="project-card animate__animated animate__fadeIn">
-                <h3>FinanceWise Decision System</h3>
-                <p>Developed a financial fraud detection system to build credit card fraud detection along with the study of credit risk analysis and customer segmentation for the same.</p>
-            </div>
+                <div class="project-card animate__animated animate__fadeIn">
+                    <h3>OneLP</h3>
+                    <p>A Django-based generative AI application integrating Together API, LangChain, and LLM models for comprehensive NLP tasks. Features include text summarization, sentiment analysis, language translation, document chat, and voice-to-text conversion.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Django</span>
+                        <span class="project-tag">LangChain</span>
+                        <span class="project-tag">NLP</span>
+                        <span class="project-tag">MongoDB</span>
+                    </div>
+                </div>
 
-            <div class="project-card animate__animated animate__fadeIn">
-                <h3>Economy Atlas </h3>
-                <p>Built a dashboard with data from multiple sources to analyze historical economic trends in 100 countries.</p>
+                <div class="project-card animate__animated animate__fadeIn">
+                    <h3>FinanceWise Decision</h3>
+                    <p>Financial fraud detection system with 98% precision for credit card fraud analysis. Implemented SMOTE to address dataset imbalance and conducted credit risk analysis and customer segmentation for more informed financial insights.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Machine Learning</span>
+                        <span class="project-tag">Streamlit</span>
+                        <span class="project-tag">Financial Analysis</span>
+                    </div>
+                </div>
+
+                <div class="project-card animate__animated animate__fadeIn">
+                    <h3>Market Mind</h3>
+                    <p>Portfolio management and stock analysis app leveraging Agno for agent-driven investment insights. Features include stock research, comparison, Q&A on stocks, and portfolio allocation recommendations.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Flask</span>
+                        <span class="project-tag">Agno</span>
+                        <span class="project-tag">MongoDB</span>
+                        <span class="project-tag">Finance</span>
+                    </div>
+                </div>
+
+                <div class="project-card animate__animated animate__fadeIn">
+                    <h3>Economy Atlas</h3>
+                    <p>Built a comprehensive dashboard analyzing historical economic trends in 100 countries using data from multiple sources. The visualization helps identify patterns and correlations in global economic indicators.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Data Visualization</span>
+                        <span class="project-tag">Economic Analysis</span>
+                        <span class="project-tag">Dashboard</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -73,13 +567,23 @@
         <div class="container">
             <h2 class="animate__animated animate__fadeIn">Experience</h2>
             <div class="timeline animate__animated animate__fadeIn">
-             
-                <div class="event">
-                    
-                    <div class="event-details">
-                        <h3>CleverInsight, Coimbatore</h3>
-                        <p>Internship - Data Analyst</p>
-                    </div>
+                <div class="event left">
+                    <h3>NGP Websmart</h3>
+                    <span class="date">December 2024 - Present</span>
+                    <p>Software Developer Intern</p>
+                    <ul>
+                        <li>Developed an application integrating DocuSign APIs for automated form filling</li>
+                        <li>Implemented Python scripts to automate price updates, reducing manual effort by 80%</li>
+                    </ul>
+                </div>
+                <div class="event right">
+                    <h3>CleverInsight</h3>
+                    <span class="date">July 2023 - December 2023</span>
+                    <p>Data Analyst Intern</p>
+                    <ul>
+                        <li>Analyzed historical voter behavior data to forecast state elections in Rajasthan, Madhya Pradesh, and Chhattisgarh</li>
+                        <li>Developed a classification model to detect early symptoms of chronic kidney disorders, improving early detection capabilities by 15%</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -88,32 +592,100 @@
     <section id="contact">
         <div class="container">
             <h2 class="animate__animated animate__fadeIn">Contact Me</h2>
-            <p class="animate__animated animate__fadeIn">Email: nikhilram1010@gmail.com</p>
-            <p class="animate__animated animate__fadeIn">GitHub: <a href="https://github.com/Nikhilsuresh11" target="_blank">github.com/Nikhil</a></p>
-            <p class="animate__animated animate__fadeIn">LinkedIn: <a href="https://www.linkedin.com/in/nikhil11r/" target="_blank">linkedin.com/in/Nikhil</a></p>
+            <div class="contact-methods animate__animated animate__fadeIn">
+                <div class="contact-method">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <div class="contact-info">nikhilram1010@gmail.com</div>
+                </div>
+                <div class="contact-method">
+                    <i class="fab fa-github contact-icon"></i>
+                    <div class="contact-info">
+                        <a href="https://github.com/nikhilsuresh11" target="_blank">github.com/nikhilsuresh11</a>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <i class="fab fa-linkedin contact-icon"></i>
+                    <div class="contact-info">
+                        <a href="https://www.linkedin.com/in/nikhil11r/" target="_blank">linkedin.com/in/nikhil11r</a>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-phone contact-icon"></i>
+                    <div class="contact-info">+91 93440 31768</div>
+                </div>
+            </div>
         </div>
     </section>
 
-   
-
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
     <section id="cta">
         <div class="container">
             <h2 class="animate__animated animate__fadeIn">Let's Create Something Amazing Together!</h2>
-            <p class="animate__animated animate__fadeIn">Ready to turn your ideas into reality? I'm available for freelance projects and collaboration.</p>
-             <a href="Resume.pdf" download="Nikhil_Resume.pdf" class="btn animate__animated animate__fadeIn">View my Resume</a>
-           
+            <p class="animate__animated animate__fadeIn">Ready to collaborate on data science projects or need a consultation? I'm available for freelance projects and potential opportunities.</p>
+            <a href="Nikhil_Resume.pdf" download="Nikhil_Resume.pdf" class="btn animate__animated animate__fadeIn">Download my Resume</a>
+            <a href="#contact" class="btn btn-secondary animate__animated animate__fadeIn">Get in Touch</a>
         </div>
     </section>
-      <footer>
+
+    <footer>
         <div class="container">
-            <p class="animate__animated animate__fadeIn">&copy; 2024 Nikhil Ramachandran As. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/nikhilsuresh11" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nikhil11r/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/nikhil.suresh_" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.hackerrank.com/nikhilram1010" class="social-link" target="_blank"><i class="fab fa-hackerrank"></i></a>
+            </div>
+            <p>&copy; 2025 Nikhil Ramachandran. All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Initialize AOS (Animate On Scroll) library
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+
+            // Highlight the active navigation item based on scroll position
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            window.addEventListener('scroll', function () {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 150;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
