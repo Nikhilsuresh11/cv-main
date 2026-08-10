@@ -2,515 +2,539 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nikhil Ramachandran - Data Science Professional | ML Enthusiast | Problem Solver">
-
-    <!-- Premium Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
-    <link rel="stylesheet" href="styles.css">
-    <title>Nikhil Ramachandran - Data Science Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Nikhil R — AI Engineer & Systems Builder. I design backend systems, AI pipelines, and the infrastructure between data and decisions.">
+  <title>Nikhil R — Systems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">
-                <span class="logo-text">NR</span>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Nikhil<span class="accent"> ®</span></a>
+      <div class="nav-center">
+        <a href="#" class="nav-brand">Nikhil<span class="accent"> ®</span></a>
+        <a href="#mission">Mission</a>
+        <a href="#process">Process</a>
+        <a href="#products">Products</a>
+        <a href="#numbers">Numbers</a>
+        <a href="#contact" class="nav-cta">Let's talk →</a>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <a href="#mission">Mission</a>
+      <a href="#numbers">Numbers</a>
+      <a href="#process">Process</a>
+      <a href="#products">Products</a>
+      <a href="#contact" class="nav-cta">Let's talk →</a>
+    </div>
+  </nav>
+
+  <!-- ========== HERO / MISSION ========== -->
+  <section id="mission" class="section hero-section">
+
+    <div class="hero-layout">
+      <div class="hero-card accent-card">
+        <div class="hero-card-inner">
+          <p class="hero-card-brand">Nikhil R<span class="accent">®</span></p>
+          <p class="hero-card-text">I design and ship backend systems, event-driven services, retrieval-augmented
+            pipelines, and the quiet plumbing that keeps them online.</p>
+          <div class="commit-wrapper">
+            <div id="commit-grid" class="commit-grid"></div>
+            <p class="commit-caption">shipped something 214 of the last 365 days</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-headline">
+        <h1>
+          <span class="mask-line"><span class="mask-inner" style="animation-delay: 0.1s;">Building</span></span>
+          <span class="mask-line"><span class="mask-inner" style="animation-delay: 0.25s;">bold</span></span>
+          <span class="mask-line"><span class="mask-inner" style="animation-delay: 0.4s;">systems</span></span>
+          <span class="mask-line"><span class="mask-inner" style="animation-delay: 0.55s;">that <span
+                class="hero-italic">scale</span></span></span>
+        </h1>
+        <div class="hero-cta-row">
+          <a href="#products" class="btn btn-primary">View products →</a>
+          <a href="#contact" class="btn btn-outline">Get in touch</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-watermark" aria-hidden="true">nikhil</div>
+
+    <div class="hero-socials">
+      <a href="https://www.linkedin.com/in/nikhilr/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+      </a>
+      <a href="https://github.com/Nikhilsuresh11" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+          </path>
+        </svg>
+      </a>
+      <a href="mailto:nikhilram1010@gmail.com" aria-label="Email">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ========== PROCESS (Experience) ========== -->
+  <section id="process" class="section process-section">
+    <div class="section-meta">
+      <span class="section-num"> Process</span>
+    </div>
+    <div class="section-meta-right">
+      <span>Release history — Versioned</span>
+    </div>
+
+    <div class="process-layout">
+      <h2 class="process-heading">
+        Where<br>
+        I<br>
+        build.
+      </h2>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-row">
+            <span class="step-index">01</span>
+            <div class="step-content">
+              <h3>AI Engineer</h3>
+              <div class="step-org">Infosys</div>
+            </div>
+            <div class="step-version"><span class="version-tag current">v4.0 July 2026 - present</span></div>
+          </div>
+          <p class="step-desc">Building AI-powered enterprise solutions. Designing and deploying production-grade ML
+            models, LLM integrations, and intelligent automation systems at scale.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-row">
+            <span class="step-index">02</span>
+            <div class="step-content">
+              <h3>Software Developer</h3>
+              <div class="step-org">NGP Websmart, Chennai</div>
+            </div>
+            <div class="step-version"><span class="version-tag">v3.0 May 2025 - June 2026</span></div>
+          </div>
+          <p class="step-desc">Modular monolith in AdonisJS, event-driven webhooks, Pub/Sub, zero-downtime migrations.
+            99% uptime across distributed services.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-row">
+            <span class="step-index">03</span>
+            <div class="step-content">
+              <h3>Software Developer Intern</h3>
+              <div class="step-org">NGP Websmart, Chennai</div>
+            </div>
+            <div class="step-version"><span class="version-tag">v2.0 Dec 2024 - May 2025</span></div>
             </a>
-            <div class="nav-links">
-                <a href="#about" class="nav-link active">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+          </div>
+          <p class="step-desc">Firebase auth with RBAC, e-signature platform POC, Nuxt.js internal dashboards, LLM
+            framework evaluation for enterprise RAG.</p>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-background">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-            <div class="gradient-orb orb-3"></div>
+        <div class="process-step">
+          <div class="step-row">
+            <span class="step-index">04</span>
+            <div class="step-content">
+              <h3>Data Analyst Intern</h3>
+              <div class="step-org">Clever Insight, Ooty</div>
+            </div>
+            <div class="step-version"><span class="version-tag">v1.0 Jul 2023 - Dec 2023</span></div>
+          </div>
+          <p class="step-desc">Election forecasting at 67% accuracy across 3 states. Statistical modeling on voter
+            behavior and demographic patterns. 20% campaign optimization lift.</p>
         </div>
-        <div class="container hero-content">
-            <div class="hero-text">
-                <div class="hero-badge animate__animated animate__fadeInDown">
-                    <i class="fas fa-code"></i>
-                    <span>Data Science Professional</span>
-                </div>
-                <h1 class="hero-title animate__animated animate__fadeInUp">
-                    Hi, I'm <span class="gradient-text">Nikhil Ramachandran</span>
-                </h1>
-                <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">
-                    Transforming data into insights | Building intelligent solutions with ML & AI
-                </p>
-                <div class="hero-cta animate__animated animate__fadeInUp animate__delay-2s">
-                    <a href="#projects" class="btn btn-primary">
-                        <span>View My Work</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="Nikhil_Resume.pdf" download="Nikhil_Ramachandran_Resume.pdf" class="btn btn-secondary">
-                        <i class="fas fa-download"></i>
-                        <span>Download Resume</span>
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">8.69</div>
-                        <div class="stat-label">CGPA</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Projects</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">2</div>
-                        <div class="stat-label">Internships</div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="profile-container">
-                    <div class="profile-glow"></div>
-                    <img src="nikhil.jpg" alt="Nikhil Ramachandran" class="profile-image">
-                    <div class="floating-elements">
-                        <div class="float-element" style="--delay: 0s;">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <div class="float-element" style="--delay: 1s;">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="float-element" style="--delay: 2s;">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div class="float-element" style="--delay: 3s;">
-                            <i class="fab fa-python"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+
+    <!-- <div class="process-banner">
+      <div class="banner-accent">
+        <span class="banner-big">0 → 1</span>
+        <span class="banner-sub">90 days</span>
+      </div>
+      <div class="banner-steps">
+        <div class="banner-step"><span class="bs-num">01</span><span class="bs-label">Validate</span></div>
+        <div class="banner-step"><span class="bs-num">02</span><span class="bs-label">Build</span></div>
+        <div class="banner-step"><span class="bs-num">03</span><span class="bs-label">Launch</span></div>
+      </div>
+    </div> -->
+  </section>
+
+  <!-- ========== PRODUCTS (Projects + Stack) ========== -->
+  <section id="products" class="section products-section">
+    <div class="section-meta">
+      <span class="section-num"> Products</span>
+    </div>
+    <div class="section-meta-right">
+      <span>Shipped &amp; in production</span>
+    </div>
+
+    <h2 class="big-heading">Shipped Projects.</h2>
+
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-header">
+          <h3>Portfolio Buzz</h3>
+          <span class="live-badge"><span class="pulse-dot"></span> Live</span>
         </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <p>Scroll to explore</p>
+        <p class="product-desc">A portfolio analyzer for stocks and mutual funds. Real-time news retrieval through Llama
+          3.3 70B to surface AI-driven investment insight — not just raw numbers.</p>
+        <div class="product-stack">
+          <span>Python</span><span>Flask</span><span>MongoDB</span><span>GROQ</span>
         </div>
-    </header>
+        <a href="https://portfolio-buzz.vercel.app/" target="_blank" rel="noopener noreferrer" class="product-link"
+          aria-label="View project">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Get to know me</span>
-                <h2 class="section-title">About Me</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="lead">Hello! I'm Nikhil Ramachandran, a passionate Data Science professional currently
-                        pursuing my Integrated M.Sc in Data Science at Coimbatore Institute of Technology with a CGPA of
-                        8.78.</p>
-
-                    <p>With experience in both software development and data analytics, I've worked on cutting-edge
-                        projects ranging
-                        from enterprise strategy platforms using multi-agent AI systems to real-time stock portfolio
-                        analyzers. My
-                        journey in technology has fueled my curiosity to explore emerging technologies, particularly in
-                        the fields of machine learning, generative AI, and cloud-native architectures.</p>
-
-                    <p>I'm enthusiastic about leveraging data and AI to drive insights and build intelligent solutions
-                        that
-                        make a positive impact. My experience across multiple roles has allowed me to apply
-                        theoretical knowledge to real-world problems, working with modern tech stacks including Node.js,
-                        Python, FastAPI, and cloud platforms like GCP.</p>
-
-                    <div class="expertise-grid">
-                        <div class="expertise-item">
-                            <i class="fas fa-robot"></i>
-                            <h4>Machine Learning</h4>
-                            <p>Building predictive models and intelligent systems</p>
-                        </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-language"></i>
-                            <h4>NLP & Gen AI</h4>
-                            <p>Natural language processing and generative AI applications</p>
-                        </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-chart-bar"></i>
-                            <h4>Data Analytics</h4>
-                            <p>Extracting insights from complex datasets</p>
-                        </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-code"></i>
-                            <h4>Full Stack Dev</h4>
-                            <p>Django, Flask, and modern web technologies</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-skills">
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <span class="skill-name">Data Science</span>
-                            <span class="skill-percent">90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <span class="skill-name">Machine Learning</span>
-                            <span class="skill-percent">85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <span class="skill-name">Python</span>
-                            <span class="skill-percent">95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <span class="skill-name">NLP & Gen AI</span>
-                            <span class="skill-percent">80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="product-card">
+        <div class="product-header">
+          <h3>Enterprise Strategy Synthesis</h3>
+          <span class="live-badge"><span class="pulse-dot"></span> Live</span>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section section-dark">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">My Toolkit</span>
-                <h2 class="section-title">Skills & Technologies</h2>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">JavaScript</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-brain"></i> ML & AI</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Machine Learning</span>
-                        <span class="skill-tag">NLP</span>
-                        <span class="skill-tag">Generative AI</span>
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">Scikit-Learn</span>
-                        <span class="skill-tag">LangChain</span>
-                        <span class="skill-tag">RAG</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> Frameworks</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Django</span>
-                        <span class="skill-tag">Flask</span>
-                        <span class="skill-tag">Streamlit</span>
-                        <span class="skill-tag">FastAPI</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Data & Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">PowerBI</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Data Visualization</span>
-                    </div>
-                </div>
-            </div>
+        <p class="product-desc">Multi-agent research platform. Parallel research, financial, and regulatory agents pull
+          from RAG-powered retrieval and synthesize a consulting-grade report in under 90 seconds.</p>
+        <div class="product-stack">
+          <span>FastAPI</span><span>LangGraph</span><span>Pinecone</span><span>MongoDB</span>
         </div>
-    </section>
+        <a href="https://enterprise-strategy-synthesis-platform.onrender.com/" target="_blank" rel="noopener noreferrer"
+          class="product-link" aria-label="View project">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">My Work</span>
-                <h2 class="section-title">Featured Projects</h2>
-            </div>
-            <div class="projects-grid">
-                <!-- Enterprise Strategy Platform -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/strategy_platform.jpg" alt="Enterprise Strategy Platform"
-                            onerror="this.style.background='linear-gradient(135deg, #667eea 0%, #764ba2 100%)'">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Enterprise Strategy Synthesis Platform</h3>
-                        <p>Designed a strategy builder platform leveraging multi-agent architecture (LangGraph) to
-                            transform complex strategic questions into executive-ready presentations, combining market
-                            insights, financial analysis, and regulatory risk assessment. Reduced turnaround time by 85%
-                            through parallel agent orchestration.</p>
-                        <div class="project-tags">
-                            <span class="tag">FastAPI</span>
-                            <span class="tag">LangGraph</span>
-                            <span class="tag">Pinecone</span>
-                            <span class="tag">MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Buzz -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/portfolio_buzz.jpg" alt="Portfolio Buzz"
-                            onerror="this.style.background='linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Portfolio Buzz</h3>
-                        <p>Developed a stock portfolio analyzer with secure authentication, enabling users to track
-                            watchlists and receive real-time news updates from multiple sources. Integrated Llama 3.3
-                            70B model to generate comprehensive investment reports, reducing research time by 60%.</p>
-                        <div class="project-tags">
-                            <span class="tag">Flask</span>
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">GROQ</span>
-                            <span class="tag">Next.js</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- DataViz Project -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/dataviz_project.jpg" alt="DataViz Project"
-                            onerror="this.style.background='linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>DataViz - Automated Visualization Tool</h3>
-                        <p>Instrumented an intelligent data visualization platform using Flask and Next.js that
-                            automatically generates insights and recommendations for any dataset, reducing manual
-                            analysis time by 30% and enabling non-technical users to derive actionable insights from
-                            complex data.</p>
-                        <div class="project-tags">
-                            <span class="tag">Flask</span>
-                            <span class="tag">Next.js</span>
-                            <span class="tag">Together AI</span>
-                            <span class="tag">Data Viz</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FinanceWise Project -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/finance_project.jpg" alt="FinanceWise Project"
-                            onerror="this.style.background='linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>FinanceWise Decision</h3>
-                        <p>Built a comprehensive financial fraud detection system achieving 98% precision for credit
-                            card transactions. Implemented SMOTE technique to handle class imbalance and integrated
-                            credit risk analysis and customer segmentation modules, improving risk assessment accuracy
-                            by 25%.</p>
-                        <div class="project-tags">
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">Streamlit</span>
-                            <span class="tag">Financial Analytics</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="product-card">
+        <div class="product-header">
+          <h3>DataViz — Automated Visualization</h3>
+          <span class="live-badge"><span class="pulse-dot"></span> Live</span>
         </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section section-dark">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Career Journey</span>
-                <h2 class="section-title">Professional Experience</h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">December 2024 - Present</div>
-                        <h3>Software Developer</h3>
-                        <h4>NGP Websmart, Chennai</h4>
-                        <ul>
-                            <li>Engineered microservices using Node.js (AdonisJS) with automated document generation and
-                                e-signature workflows, reducing manual processing time by 40% through streamlined form
-                                creation and seamless third-party API integration</li>
-                            <li>Architected real-time event processing systems using webhooks and Pub/Sub messaging,
-                                ensuring 99% uptime for critical business operations and enabling instant updates across
-                                distributed services</li>
-                            <li>Integrated Slack and email notification systems with real-time alerting mechanisms to
-                                monitor system health, reducing incident response time by 50%</li>
-                            <li>Implemented ETL pipelines for efficient data ingestion from GCP buckets to application
-                                interfaces, improving data delivery speed by 35%</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span>Node.js</span>
-                            <span>AdonisJS</span>
-                            <span>GCP</span>
-                            <span>Webhooks</span>
-                            <span>Pub/Sub</span>
-                            <span>ETL</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">July 2023 - December 2023</div>
-                        <h3>Data Analyst Intern</h3>
-                        <h4>CleverInsight, Ooty, Nilgiris</h4>
-                        <ul>
-                            <li>Forecasted November 2023 state elections across Rajasthan, Madhya Pradesh, and
-                                Chhattisgarh, achieving 67% prediction accuracy by analyzing historical voter behavior
-                                and demographic patterns</li>
-                            <li>Delivered actionable insights on live inventory data to stakeholders, identifying key
-                                trends and optimization opportunities that improved inventory turnover</li>
-                            <li>Collaborated with cross-functional data teams to extract and analyze large-scale
-                                datasets, delivering actionable insights that informed strategic business decisions and
-                                campaign optimization by 20%</li>
-                            <li>Partnered with marketing teams to analyze product reach metrics and customer engagement
-                                patterns, supporting product analysts in developing data-driven strategies for market
-                                expansion</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span>Data Analysis</span>
-                            <span>Predictive Modeling</span>
-                            <span>Business Intelligence</span>
-                            <span>Python</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <p class="product-desc">Intelligent data visualization platform that automatically generates insights and
+          recommendations for any dataset, reducing manual analysis time by 30%.</p>
+        <div class="product-stack">
+          <span>Flask</span><span>Next.js</span><span>Together AI</span>
         </div>
-    </section>
+        <a href="https://data-viz-d5vi.vercel.app/" target="_blank" rel="noopener noreferrer" class="product-link"
+          aria-label="View project">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Get In Touch</span>
-                <h2 class="section-title">Let's Connect</h2>
-                <p class="section-description">Ready to collaborate on data science projects or need a consultation? I'm
-                    available for freelance projects and potential opportunities.</p>
-            </div>
-            <div class="contact-grid">
-                <a href="mailto:nikhilram1010@gmail.com" class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email</h3>
-                    <p>nikhilram1010@gmail.com</p>
-                </a>
-                <a href="https://github.com/nikhilsuresh11" target="_blank" class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <h3>GitHub</h3>
-                    <p>@nikhilsuresh11</p>
-                </a>
-                <a href="https://www.linkedin.com/in/nikhil11r/" target="_blank" class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin"></i>
-                    </div>
-                    <h3>LinkedIn</h3>
-                    <p>nikhil11r</p>
-                </a>
-                <a href="tel:+919344031768" class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h3>Phone</h3>
-                    <p>+91 93440 31768</p>
-                </a>
-            </div>
+      <div class="product-card">
+        <div class="product-header">
+          <h3>FinanceWise Decision</h3>
+          <span class="live-badge dim"><span class="pulse-dot dim"></span> Built</span>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3 class="gradient-text">Nikhil Ramachandran</h3>
-                    <p>Data Science Professional | ML Enthusiast</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/nikhilsuresh11" target="_blank" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/nikhil11r/" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://instagram.com/nikhil.suresh_" target="_blank" class="social-link">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.hackerrank.com/nikhilram1010" target="_blank" class="social-link">
-                        <i class="fab fa-hackerrank"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Nikhil Ramachandran. All rights reserved.</p>
-            </div>
+        <p class="product-desc">Financial fraud detection system achieving 98% precision. SMOTE for class imbalance,
+          credit risk analysis, and customer segmentation — improving risk assessment by 25%.</p>
+        <div class="product-stack">
+          <span>Machine Learning</span><span>Streamlit</span><span>Analytics</span>
         </div>
-    </footer>
+      </div>
+    </div>
 
-    <script src="script.js"></script>
+    <!-- Stack -->
+    <div class="stack-section">
+      <h3 class="stack-title">Tech stack</h3>
+      <div class="stack-layers">
+        <div class="stack-layer">
+          <span class="layer-label">Languages</span>
+          <div class="layer-chips">
+            <span>Python</span><span>JavaScript</span><span>SQL</span>
+          </div>
+        </div>
+        <div class="stack-layer">
+          <span class="layer-label">Frameworks</span>
+          <div class="layer-chips">
+            <span>Node.js</span><span>AdonisJS</span><span>Flask</span><span>FastAPI</span><span>LangGraph</span><span>Nuxt.js</span>
+          </div>
+        </div>
+        <div class="stack-layer">
+          <span class="layer-label">Data</span>
+          <div class="layer-chips">
+            <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Pinecone</span><span>Firestore</span>
+          </div>
+        </div>
+        <div class="stack-layer">
+          <span class="layer-label">Cloud</span>
+          <div class="layer-chips">
+            <span>GCP</span><span>AWS
+              S3</span><span>DynamoDB</span><span>Aurora</span><span>Docker</span><span>Firebase</span><span>Git</span>
+          </div>
+        </div>
+        <div class="stack-layer">
+          <span class="layer-label">AI / ML</span>
+          <div class="layer-chips">
+            <span>LLMs</span><span>RAG</span><span>NLP</span><span>Generative AI</span><span>Machine Learning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="stack-section" style="margin-bottom: 48px;">
+      <h3 class="stack-title">Soft skills</h3>
+      <div class="stack-layers">
+        <div class="stack-layer">
+          <span class="layer-label">Interests</span>
+          <div class="layer-chips">
+            <span>Geopolitics</span>
+            <span>Financial Markets</span>
+            <span>Prescriptive Analytics</span>
+            <span>Pattern Recognition</span>
+            <span>Sports</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Research & Education -->
+    <div class="research-section">
+      <div class="research-card">
+        <span class="research-kicker">Education · 2020 – 2025</span>
+        <h3>Integrated M.Sc. in Data Science</h3>
+        <p>Coimbatore Institute of Technology, Coimbatore — CGPA 8.69 / 10.0</p>
+      </div>
+      <div class="research-card">
+        <span class="research-kicker">Publication · 2022</span>
+        <h3>Predictive Analytics</h3>
+        <p>9th International Conference on Business Analytics and Intelligence (ICBAI 2022), IIM Bangalore.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NUMBERS ========== -->
+  <section id="numbers" class="section numbers-section">
+    <div class="section-meta">
+      <span class="section-num"> By the numbers</span>
+    </div>
+    <div class="section-meta-right">
+      <span>Snapshot — Aug 2026</span>
+    </div>
+
+    <div class="scroll-velocity-wrapper">
+      <div class="scroll-velocity-row" data-direction="-1" data-speed="1.3">
+        <div class="scroll-velocity-inner">
+          <span>What I built &nbsp;&mdash;&nbsp;</span>
+          <span>What I built &nbsp;&mdash;&nbsp;</span>
+          <span>What I built &nbsp;&mdash;&nbsp;</span>
+          <span>What I built &nbsp;&mdash;&nbsp;</span>
+          <span>What I built &nbsp;&mdash;&nbsp;</span>
+          <span>What I built &nbsp;&mdash;&nbsp;</span>
+          <span>What I built &nbsp;&mdash;&nbsp;</span>
+          <span>What I built &nbsp;&mdash;&nbsp;</span>
+        </div>
+      </div>
+      <div class="scroll-velocity-row" data-direction="1" data-speed="1.3">
+        <div class="scroll-velocity-inner">
+          <span>since day one. &nbsp;&mdash;&nbsp;</span>
+          <span>since day one. &nbsp;&mdash;&nbsp;</span>
+          <span>since day one. &nbsp;&mdash;&nbsp;</span>
+          <span>since day one. &nbsp;&mdash;&nbsp;</span>
+          <span>since day one. &nbsp;&mdash;&nbsp;</span>
+          <span>since day one. &nbsp;&mdash;&nbsp;</span>
+          <span>since day one. &nbsp;&mdash;&nbsp;</span>
+          <span>since day one. &nbsp;&mdash;&nbsp;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-number">40<span class="metric-unit">%</span></div>
+        <div class="metric-label">Faster processing</div>
+        <div class="metric-sub">automated document workflows</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number">99<span class="metric-unit">%</span></div>
+        <div class="metric-label">Uptime maintained</div>
+        <div class="metric-sub">across distributed services</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number">90<span class="metric-unit">s</span></div>
+        <div class="metric-label">Report generation</div>
+        <div class="metric-sub">multi-agent synthesis platform</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number">8<span class="metric-unit">×</span></div>
+        <div class="metric-label">Delivery speed</div>
+        <div class="metric-sub">ETL pipeline optimization</div>
+      </div>
+    </div> -->
+
+    <div class="gridA">
+      <div class="cardA">
+        <div class="cardA-idx">01</div>
+        <div class="cardA-icon">◆</div>
+        <h3>AI / ML</h3>
+        <p>LLMs, RAG architectures, NLP, multi-agent orchestration, generative AI. From prototype to production-grade AI
+          pipelines.</p>
+      </div>
+      <div class="cardA">
+        <div class="cardA-idx">02</div>
+        <div class="cardA-icon">⚙</div>
+        <h3>Backend Systems</h3>
+        <p>Event-driven microservices, webhooks, Pub/Sub, ETL pipelines. The quiet plumbing that keeps distributed
+          systems online.</p>
+      </div>
+      <div class="cardA">
+        <div class="cardA-idx">03</div>
+        <div class="cardA-icon">☁</div>
+        <h3>Cloud &amp; Data</h3>
+        <p>GCP, AWS (S3, DynamoDB, Aurora), PostgreSQL, Firebase, Pinecone. Infrastructure that scales without breaking.
+        </p>
+      </div>
+      <div class="cardA">
+        <div class="cardA-idx">04</div>
+        <div class="cardA-icon">▤</div>
+        <h3>Analytics</h3>
+        <p>Statistical modeling, predictive analytics, voter behavior forecasting. Turning messy data into clear
+          decisions.</p>
+      </div>
+    </div>
+
+    <div class="gridB">
+      <div class="cardB">
+        <div class="cardB-tag">Event-driven systems</div>
+        <div class="cardB-bignum">0<small>downtime migrations</small></div>
+        <div class="cardB-capline">Real-time backends via webhooks and Pub/Sub.</div>
+        <ul class="cardB-bul">
+          <li>Led zero-downtime microservice migrations</li>
+          <li>Optimized databases under high-concurrency loads</li>
+        </ul>
+      </div>
+      <div class="cardB">
+        <div class="cardB-tag">AI &amp; RAG pipelines</div>
+        <div class="cardB-bignum">2<small>architectures shipped</small></div>
+        <div class="cardB-capline">Agentic RAG using Langraph and Elastic Search. And an Pure Node.js based document
+          signing workflow. </div>
+        <ul class="cardB-bul">
+          <li>Evaluated LLM frameworks for enterprise fit</li>
+          <li>Built automated Nuxt.js lifecycle dashboards</li>
+        </ul>
+      </div>
+      <div class="cardB">
+        <div class="cardB-tag">Predictive analytics</div>
+        <div class="cardB-bignum">5<small>+ elections predicted</small></div>
+        <div class="cardB-capline">Forecasting via robust statistical modeling.</div>
+        <ul class="cardB-bul">
+          <li>Extracted insight from large demographic datasets</li>
+          <li>Predicted Tamil Nadu, MP, Rajasthan and Chhattisgarh elections</li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="cardB">
+        <div class="cardB-tag">Data infrastructure</div>
+        <div class="cardB-bignum">35<small>% faster delivery</small></div>
+        <div class="cardB-capline">ETL pipelines accelerating data delivery.</div>
+        <ul class="cardB-bul">
+          <li>Real-time Slack/email system health alerts</li>
+          <li>Streamlined third-party integrations</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="validate-row">
+      <div class="validate-steps">
+        <div class="validate-step"><span class="step-num">01</span><span class="step-label">Validate</span></div>
+        <div class="validate-step"><span class="step-num">02</span><span class="step-label">Build</span></div>
+        <div class="validate-step"><span class="step-num">03</span><span class="step-label">Launch</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT / CTA ========== -->
+  <section id="contact" class="section contact-section">
+    <div class="section-meta">
+      <span class="section-num">04 — Contact</span>
+    </div>
+
+    <div class="contact-layout">
+      <div class="contact-left">
+        <h2 class="contact-heading">
+          Ready<br>to build?
+        </h2>
+        <p class="contact-sub">If you're 0 → 1 with conviction, I want to hear from you.
+        </p>
+        <div class="contact-pills">
+          <a href="mailto:nikhilram1010@gmail.com" class="contact-pill">nikhilram1010@gmail.com</a>
+          <a href="tel:+919344031768" class="contact-pill">+91 93440 31768</a>
+          <a href="Nikhil_Resume.pdf" download class="contact-pill">Download Resume ↓</a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <a href="mailto:nikhilram1010@gmail.com" class="big-cta-btn">Let's talk →</a>
+      </div>
+    </div>
+    <div class="contact-watermark" aria-hidden="true">Nikhil</div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <!-- <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-brand">Nikhil<span class="accent"> ®</span></span>
+        <span class="footer-sep">//</span>
+        <span class="footer-meta">Est. 2023</span>
+        <span class="footer-sep">//</span>
+        <span class="footer-meta">AI Engineer &amp; Systems Builder</span>
+      </div> -->
+    <!-- <div class="footer-links">
+        <a href="#mission">Mission</a>
+        <a href="#numbers">Numbers</a>
+        <a href="#process">Process</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Let's talk</a>
+        <a href="https://www.linkedin.com/in/nikhil11r/" target="_blank">LinkedIn ↗</a>
+        <a href="https://github.com/nikhilsuresh11" target="_blank">GitHub ↗</a>
+      </div>
+    </div> -->
+
+    
+    <div class="footer-bottom" style="border-top: none; padding-top: 0; margin-bottom: 0;">
+      <span>© 2026 Nikhil R. All rights reserved.</span>
+      <span>Chennai, India</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
