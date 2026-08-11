@@ -29,7 +29,22 @@
         <a href="#numbers">Numbers</a>
         <a href="#contact" class="nav-cta">Let's talk →</a>
       </div>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
       <button class="mobile-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -54,8 +69,11 @@
           <p class="hero-card-text">I design and ship backend systems, event-driven services, retrieval-augmented
             pipelines, and the quiet plumbing that keeps them online.</p>
           <div class="commit-wrapper">
+            <div class="commit-header">
+              <span id="commit-title">2023</span>
+            </div>
             <div id="commit-grid" class="commit-grid"></div>
-            <p class="commit-caption">shipped something 214 of the last 365 days</p>
+            <div class="commit-caption">Gen AI · LLMs · RAG · Multi-Agent</div>
           </div>
         </div>
       </div>
@@ -291,7 +309,7 @@
         <div class="stack-layer">
           <span class="layer-label">Data</span>
           <div class="layer-chips">
-            <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Pinecone</span><span>Firestore</span>
+            <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Pinecone</span><span>Firestore</span><span>Elasticsearch</span>
           </div>
         </div>
         <div class="stack-layer">
@@ -304,7 +322,7 @@
         <div class="stack-layer">
           <span class="layer-label">AI / ML</span>
           <div class="layer-chips">
-            <span>LLMs</span><span>RAG</span><span>NLP</span><span>Generative AI</span><span>Machine Learning</span>
+            <span>LLMs</span><span>NLP</span><span>RAG</span><span>Machine Learning</span><span>Generative AI</span><span>Agentic AI</span>
           </div>
         </div>
       </div>
@@ -418,7 +436,7 @@
         <div class="cardA-idx">03</div>
         <div class="cardA-icon">☁</div>
         <h3>Cloud &amp; Data</h3>
-        <p>GCP, AWS (S3, DynamoDB, Aurora), PostgreSQL, Firebase, Pinecone. Infrastructure that scales without breaking.
+        <p>GCP (Cloud Run/Tasks/Scheduler, Pub/Sub, GCS ), AWS (S3, DynamoDB, Aurora), PostgreSQL, Firebase, Pinecone. Infrastructure that scales without breaking.
         </p>
       </div>
       <div class="cardA">
@@ -442,12 +460,12 @@
       </div>
       <div class="cardB">
         <div class="cardB-tag">AI &amp; RAG pipelines</div>
-        <div class="cardB-bignum">2<small>architectures shipped</small></div>
-        <div class="cardB-capline">Agentic RAG using Langraph and Elastic Search. And an Pure Node.js based document
-          signing workflow. </div>
+        <div class="cardB-bignum">3<small>architectures shipped</small></div>
+        <div class="cardB-capline">Agentic AI application, ETL Pipeline and Node RestAPI's</div>
         <ul class="cardB-bul">
-          <li>Evaluated LLM frameworks for enterprise fit</li>
-          <li>Built automated Nuxt.js lifecycle dashboards</li>
+          <li>Agentic RAG using LangGraph and Elastic Search.</li>
+          <li>ETL pipeline for large datasets using Polars and FastAPI.</li>
+          <li>Document signing workflow using Adonis.js</li>
         </ul>
       </div>
       <div class="cardB">
@@ -457,7 +475,6 @@
         <ul class="cardB-bul">
           <li>Extracted insight from large demographic datasets</li>
           <li>Predicted Tamil Nadu, MP, Rajasthan and Chhattisgarh elections</li>
-          <li></li>
         </ul>
       </div>
       <div class="cardB">
@@ -467,6 +484,7 @@
         <ul class="cardB-bul">
           <li>Real-time Slack/email system health alerts</li>
           <li>Streamlined third-party integrations</li>
+          <li>Webhook event-driven data processing</li>
         </ul>
       </div>
     </div>

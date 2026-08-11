@@ -62,10 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const isLight = document.documentElement.getAttribute('data-theme') === 'light';
       if (isLight) {
         document.documentElement.removeAttribute('data-theme');
-        themeToggle.textContent = '🌙';
       } else {
         document.documentElement.setAttribute('data-theme', 'light');
-        themeToggle.textContent = '☀️';
       }
 
       // Re-trigger mask animations on theme switch
@@ -131,17 +129,106 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ========== Commit Grid ==========
   const commitGrid = document.getElementById('commit-grid');
-  if (commitGrid) {
-    const totalDots = 7 * 19; // 133 dots fits perfectly in the card width
-    for (let i = 0; i < totalDots; i++) {
-      const dot = document.createElement('div');
-      dot.className = 'commit-dot';
-      // ~35% chance for a dot to be 'active' (dark tone)
-      if (Math.random() < 0.35) {
-        dot.classList.add('active');
+  const commitTitle = document.getElementById('commit-title');
+  if (commitGrid && commitTitle) {
+    const totalCols = 19;
+    const totalRows = 7;
+    
+    const patterns = [
+      {
+        title: "2023",
+        grid: [
+          "    #   #  #       ",
+          "    ## ##  #       ",
+          "    # # #  #       ",
+          "    #   #  #       ",
+          "    #   #  #       ",
+          "    #   #  #       ",
+          "    #   #  ####    "
+        ]
+      },
+      {
+        title: "2024",
+        grid: [
+          "  #   # #    ###   ",
+          "  ##  # #    #  #  ",
+          "  # # # #    #  #  ",
+          "  #  ## #    ###   ",
+          "  #   # #    #     ",
+          "  #   # #    #     ",
+          "  #   # #### #     "
+        ]
+      },
+      {
+        title: "2025",
+        grid: [
+          "  #    #    #   #  ",
+          "  #    #    ## ##  ",
+          "  #    #    # # #  ",
+          "  #    #    #   #  ",
+          "  #    #    #   #  ",
+          "  #    #    #   #  ",
+          "  #### #### #   #  "
+        ]
+      },
+      {
+        title: "2026",
+        grid: [
+          "     ###    ###    ",
+          "    #   #    #     ",
+          "    #   #    #     ",
+          "    #####    #     ",
+          "    #   #    #     ",
+          "    #   #    #     ",
+          "    #   #   ###    "
+        ]
       }
-      commitGrid.appendChild(dot);
+    ];
+
+    let currentPatternIdx = 0;
+
+    // Create dots once
+    const dots = [];
+    for (let c = 0; c < totalCols; c++) {
+      dots[c] = [];
+      for (let r = 0; r < totalRows; r++) {
+        const dot = document.createElement('div');
+        dot.className = 'commit-dot';
+        commitGrid.appendChild(dot);
+        dots[c][r] = dot;
+      }
     }
+
+    function renderPattern(index) {
+      const pattern = patterns[index];
+      commitTitle.textContent = pattern.title;
+      
+      for (let c = 0; c < totalCols; c++) {
+        for (let r = 0; r < totalRows; r++) {
+          const char = pattern.grid[r][c];
+          const dot = dots[c][r];
+          
+          if (char === '#') {
+            dot.className = 'commit-dot active';
+          } else {
+            if (Math.random() < 0.05) {
+              dot.className = 'commit-dot active';
+            } else {
+              dot.className = 'commit-dot';
+            }
+          }
+        }
+      }
+    }
+
+    // Initial render
+    renderPattern(0);
+
+    // Cycle every 3 seconds
+    setInterval(() => {
+      currentPatternIdx = (currentPatternIdx + 1) % patterns.length;
+      renderPattern(currentPatternIdx);
+    }, 3000);
   }
 
   // ========== Intersection Observer — Reveal animations ==========
